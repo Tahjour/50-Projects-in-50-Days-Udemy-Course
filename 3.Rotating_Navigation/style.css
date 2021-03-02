@@ -25,6 +25,10 @@ body {
 	transform: rotate(-20deg);
 }
 
+.container.show-nav .circle{
+	transform: rotate(-70deg);
+}
+
 .circle-container {
 	position: fixed;
 	top: -100px;
@@ -89,6 +93,11 @@ body {
 	line-height: 1.5;
 }
 
+.container.show-nav + nav li{
+	transform: translateX(0);
+	transition: transform 0.3s;
+}
+
 nav {
 	position: fixed;
 	bottom: 40px;
@@ -106,17 +115,19 @@ nav ul li {
 	color: #fff;
 	margin: 40px 0;
 	transform: translateX(-100%);
-	transition: trasnform 0.4s ease-in;
+	transition: trasnform 0.3s ease-in;
 }
 
 nav ul li + li {
 	margin-left: 15px;
 	transform: translateX(-150%);
+	transition: transform 0.3s;
 }
 
 nav ul li + li + li {
 	margin-left: 30px;
 	transform: translateX(-200%);
+	transition: transform 0.3s;
 }
 
 nav ul li i {
